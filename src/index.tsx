@@ -22,19 +22,18 @@ try {
   const debug = (launchParams.tgWebAppStartParam || '').includes('debug')
     || import.meta.env.DEV;
 
-  // Configure all application dependencies.
   await init({
     debug,
     eruda: debug && ['ios', 'android'].includes(platform),
     mockForMacOS: platform === 'macos',
-  })
-    .then(() => {
-      root.render(
-        <StrictMode>
-          <Root/>
-        </StrictMode>,
-      );
-    });
-} catch (e) {
+  });
+
+  root.render(
+    <StrictMode>
+      <Root/>
+    </StrictMode>,
+  );
+} catch (error) {
+  console.error('Failed to bootstrap Telegram Mini App', error);
   root.render(<EnvUnsupported/>);
 }

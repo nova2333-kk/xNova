@@ -1,8 +1,8 @@
-import { TonConnectUIProvider } from '@tonconnect/ui-react';
+import { AppRoot } from '@telegram-apps/telegram-ui';
+import { miniApp, useLaunchParams, useSignal } from '@tma.js/sdk-react';
 
-import { App } from '@/components/App.tsx';
+import { App } from '@/app/App.tsx';
 import { ErrorBoundary } from '@/components/ErrorBoundary.tsx';
-import { publicUrl } from '@/helpers/publicUrl.ts';
 
 function ErrorBoundaryError({ error }: { error: unknown }) {
   return (
@@ -22,13 +22,18 @@ function ErrorBoundaryError({ error }: { error: unknown }) {
 }
 
 export function Root() {
+  const lp = useLaunchParams();
+  const isDark = useSignal(miniApp.isDark);
+
   return (
     <ErrorBoundary fallback={ErrorBoundaryError}>
-      <TonConnectUIProvider
-        manifestUrl={publicUrl('tonconnect-manifest.json')}
+      <AppRoot
+        appearance={isDark ? 'dark' : 'light'}
+        className={isDark ? 'dark' : undefined}
+        platform={['macos', 'ios'].includes(lp.tgWebAppPlatform) ? 'ios' : 'base'}
       >
         <App/>
-      </TonConnectUIProvider>
+      </AppRoot>
     </ErrorBoundary>
   );
 }

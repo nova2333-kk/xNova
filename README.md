@@ -1,14 +1,17 @@
-# Telegram Mini Apps React Template
+# xNova Telegram Mini App
 
-This template demonstrates how developers can implement a single-page
-application on the Telegram Mini Apps platform using the following technologies
-and libraries:
+This repository now mirrors the design stored in `/Users/kk/work/figma/project`
+and removes the out-of-the-box Telegram sample pages. The application ships the
+custom wallet, apps, friends, and onboarding flows from that Figma file while
+remaining fully compatible with Telegram Mini Apps.
 
-- [React](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [TON Connect](https://docs.ton.org/develop/dapps/ton-connect/overview)
+The stack consists of:
+
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) with a lightweight component layer
+- [lucide-react](https://lucide.dev/) for icons
 - [@tma.js SDK](https://docs.telegram-mini-apps.com/packages/tma-js-sdk)
-- [Telegram UI](https://github.com/Telegram-Mini-Apps/TelegramUI)
+- [Telegram UI](https://github.com/Telegram-Mini-Apps/TelegramUI) `AppRoot`
 - [Vite](https://vitejs.dev/)
 
 > The template was created using [npm](https://www.npmjs.com/). Therefore, it is
@@ -85,17 +88,28 @@ To view the application, you need to open the `Local`
 link (`https://localhost:5173/reactjs-template` in this example) in your
 browser:
 
-![Application](assets/application.png)
+The UI shown in the dev server now matches the "Home / Apps / Friends / Wallet /
+Create Wallet / Set Password" screens from the Figma deliverable. You can switch
+between the main tabs through the bottom navigation and trigger the onboarding
+flows via the wallet CTA buttons.
 
 It is important to note that some libraries in this template, such as
 `@tma.js/sdk`, are not intended for use outside of Telegram.
 
 Nevertheless, they appear to function properly. This is because the
-`src/mockEnv.ts` file, which is imported in the application's entry point (
-`src/index.ts`), employs the `mockTelegramEnv` function to simulate the Telegram
+`src/mockEnv.ts` file, which is imported in the application's entry point
+(`src/index.ts`), employs the `mockTelegramEnv` function to simulate the Telegram
 environment. This trick convinces the application that it is running in a
 Telegram-based environment. Therefore, be cautious not to use this function in
 production mode unless you fully understand its implications.
+
+> [!TIP]
+> When the bundle is served outside Telegram (for example, on GitHub Pages) the
+> mock environment is automatically enabled. To disable this behavior for a
+> production build, remove the `mockEnv` import or add `VITE_FORCE_TG_MOCK=false`
+> before building. You can also force-enable mocking on any host by either
+> setting `VITE_FORCE_TG_MOCK=true` at build time or by opening the app with
+> `?mockEnv=1` appended to the URL.
 
 > [!WARNING]
 > Because we are using self-signed SSL certificates, the Android and iOS
