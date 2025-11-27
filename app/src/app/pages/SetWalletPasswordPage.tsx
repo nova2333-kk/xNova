@@ -38,7 +38,6 @@ export function SetWalletPasswordPage({ onBack, onPasswordSet }: SetWalletPasswo
           <button className="rounded-full p-2" onClick={onBack}>
             <ArrowLeft className="h-6 w-6" />
           </button>
-          <h1 className="text-xl font-semibold">XWorld</h1>
         </div>
         <div className="flex items-center gap-1 text-slate-500">
           <button className="rounded-full p-2">
@@ -55,7 +54,7 @@ export function SetWalletPasswordPage({ onBack, onPasswordSet }: SetWalletPasswo
           <h2 className="text-2xl font-semibold text-slate-900">设置钱包密码</h2>
           <p className="mt-3 text-sm text-slate-500">
             <span className="text-slate-900">请设置 6 位数字密码，</span>
-            此密码用于在此设备上使用您的 XWorld 钱包。
+            此密码用于在此设备上使用您的钱包。
           </p>
         </div>
 

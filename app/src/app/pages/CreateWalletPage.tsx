@@ -22,7 +22,6 @@ export function CreateWalletPage({ onBack, onCreateWallet }: CreateWalletPagePro
           <button className="rounded-full p-2" onClick={onBack}>
             <ArrowLeft className="h-6 w-6" />
           </button>
-          <h1 className="text-xl font-semibold">XWorld</h1>
         </div>
         <div className="flex items-center gap-1 text-slate-500">
           <button className="rounded-full p-2">

@@ -12,7 +12,6 @@ export function FriendsPage() {
           <button className="rounded-full p-1 text-white/70">
             <ArrowLeft className="h-6 w-6" />
           </button>
-          <h1 className="text-xl font-semibold">XWorld</h1>
         </div>
         <div className="flex items-center gap-1 text-white/80">
           <button className="rounded-full p-2">
@@ -45,8 +44,6 @@ export function FriendsPage() {
         <div className="flex animate-scroll-seamless whitespace-nowrap text-sm uppercase tracking-[0.2em] text-white/80">
           {Array.from({ length: 12 }, (_, index) => index).map((index) => (
             <span key={index} className="mx-6 flex items-center gap-2">
-              <span className="h-1 w-1 rounded-full bg-white" />
-              XWORLD
               <span className="h-1 w-1 rounded-full bg-white" />
             </span>
           ))}
