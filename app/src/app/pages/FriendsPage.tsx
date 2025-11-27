@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react';
-import { Copy, ChevronDown, MoreVertical, ChevronRight, ArrowLeft } from 'lucide-react';
+import { Copy, ChevronRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -7,22 +7,6 @@ import { Card, CardContent } from '@/components/ui/card';
 export function FriendsPage() {
   return (
     <div className="min-h-full bg-black pb-10 text-white">
-      <header className="sticky top-0 z-20 flex items-center justify-between bg-black/95 px-4 py-3">
-        <div className="flex items-center gap-4">
-          <button className="rounded-full p-1 text-white/70">
-            <ArrowLeft className="h-6 w-6" />
-          </button>
-        </div>
-        <div className="flex items-center gap-1 text-white/80">
-          <button className="rounded-full p-2">
-            <ChevronDown className="h-5 w-5" />
-          </button>
-          <button className="rounded-full p-2">
-            <MoreVertical className="h-5 w-5" />
-          </button>
-        </div>
-      </header>
-
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-black to-slate-900 px-6 py-10">
         <div
           className="pointer-events-none absolute inset-0 opacity-10"

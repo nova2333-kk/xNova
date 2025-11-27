@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { ArrowLeft, ChevronDown, MoreVertical } from 'lucide-react';
 
 interface SetWalletPasswordPageProps {
   onBack: () => void;
@@ -33,22 +32,6 @@ export function SetWalletPasswordPage({ onBack, onPasswordSet }: SetWalletPasswo
 
   return (
     <div className="flex min-h-full flex-col bg-white">
-      <header className="flex items-center justify-between border-b px-4 py-3">
-        <div className="flex items-center gap-3">
-          <button className="rounded-full p-2" onClick={onBack}>
-            <ArrowLeft className="h-6 w-6" />
-          </button>
-        </div>
-        <div className="flex items-center gap-1 text-slate-500">
-          <button className="rounded-full p-2">
-            <ChevronDown className="h-5 w-5" />
-          </button>
-          <button className="rounded-full p-2">
-            <MoreVertical className="h-5 w-5" />
-          </button>
-        </div>
-      </header>
-
       <main className="flex flex-1 flex-col px-6 pt-6">
         <div>
           <h2 className="text-2xl font-semibold text-slate-900">设置钱包密码</h2>

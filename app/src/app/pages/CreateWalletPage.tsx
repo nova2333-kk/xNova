@@ -1,5 +1,3 @@
-import { ArrowLeft, ChevronDown, MoreVertical } from 'lucide-react';
-
 import heroImage from '@/assets/application.png';
 import { Button } from '@/components/ui/button';
 
@@ -17,22 +15,6 @@ export function CreateWalletPage({ onBack, onCreateWallet }: CreateWalletPagePro
   };
   return (
     <div className="flex min-h-full flex-col bg-white">
-      <header className="flex items-center justify-between border-b px-4 py-3">
-        <div className="flex items-center gap-3">
-          <button className="rounded-full p-2" onClick={onBack}>
-            <ArrowLeft className="h-6 w-6" />
-          </button>
-        </div>
-        <div className="flex items-center gap-1 text-slate-500">
-          <button className="rounded-full p-2">
-            <ChevronDown className="h-5 w-5" />
-          </button>
-          <button className="rounded-full p-2">
-            <MoreVertical className="h-5 w-5" />
-          </button>
-        </div>
-      </header>
-
       <main className="flex flex-1 flex-col items-center gap-8 px-6 py-8 text-center">
         <div className="w-full max-w-md space-y-6">
           <img

@@ -5,7 +5,6 @@ import {
   ArrowUpFromLine,
   ChevronDown,
   Flame,
-  MoreVertical,
   ScanLine,
 } from 'lucide-react';
 
@@ -23,24 +22,6 @@ export function WalletPage() {
 
   return (
     <div className="min-h-full bg-white">
-      <header className="flex items-center justify-between border-b px-4 py-3">
-        <div className="flex items-center gap-3">
-          <button className="rounded-full p-1">
-            <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-          </button>
-        </div>
-        <div className="flex items-center gap-1">
-          <button className="rounded-full p-2">
-            <ChevronDown className="h-5 w-5" />
-          </button>
-          <button className="rounded-full p-2">
-            <MoreVertical className="h-5 w-5" />
-          </button>
-        </div>
-      </header>
-
       <div className="px-4 py-4">
         <div className="mb-2 flex items-center justify-between">
           <h2 className="text-lg font-semibold">资产总览</h2>
